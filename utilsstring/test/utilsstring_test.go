@@ -15,3 +15,33 @@ func TestIntToString(t *testing.T) {
 	}
 
 }
+
+func TestIsEmpty(t *testing.T) {
+	var data string = ""
+
+	if utilsstring.IsEmpty(data) {
+		t.Errorf("data %s", data)
+	}
+
+	data = " eee"
+
+	if !utilsstring.IsEmpty(data) {
+		t.Errorf("data %s", data)
+	}
+
+}
+
+func TestIsNotEmpty(t *testing.T) {
+	var data string = " asd"
+
+	if utilsstring.IsNotEmpty(data) {
+		t.Errorf("data %s", data)
+	}
+
+	data = ""
+
+	if !utilsstring.IsNotEmpty(data) {
+		t.Errorf("data %s", data)
+	}
+
+}
