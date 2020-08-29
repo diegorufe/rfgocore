@@ -15,8 +15,8 @@ const (
 	ShiftRight ShiftType = false
 )
 
-// ConvertToShiftType is a function to convert bool to ShiftType operator
-func ConvertToShiftType(shiftLeftValue bool) ShiftType {
+// ConvertBoolToShiftType is a function to convert bool to ShiftType operator
+func ConvertBoolToShiftType(shiftLeftValue bool) ShiftType {
 	if shiftLeftValue {
 		return ShiftLeft
 	}
