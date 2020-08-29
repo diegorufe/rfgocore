@@ -2,7 +2,7 @@ package utilsbit
 
 import (
 	"reflect"
-	"rfgocore/utilsbit"
+	"rfgocore/utils/utilsbit"
 	"testing"
 )
 
