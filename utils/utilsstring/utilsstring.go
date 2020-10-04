@@ -17,7 +17,7 @@ func IntToString(value int) string {
 func IsEmpty(value string) bool {
 	var result string = strings.TrimLeft(value, TrimValue)
 	result = strings.TrimRight(value, TrimValue)
-	return result != ""
+	return result == ""
 }
 
 // IsNotEmpty method to check string is not empty
