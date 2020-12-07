@@ -26,7 +26,7 @@ func Error(data interface{}) {
 
 // IsErrorEnabled : method for check error enabled
 func IsErrorEnabled() bool {
-	return IsDebugEnabled() || (logLevel&0x01) > 0
+	return (logLevel & 0x0F) > 0
 }
 
 // Fatal : method for print fatal logger
