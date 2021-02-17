@@ -1,13 +1,13 @@
-package utilsbit
+package utilsbytes
 
 import (
 	"reflect"
-	"rfgocore/utils/utilsbit"
+	utilsbytes "rfgocore/utils/utilsbytes"
 	"testing"
 )
 
 func TestShiftLeft(t *testing.T) {
-	var data uint64 = utilsbit.ShiftBits(utilsbit.ShiftLeft, 80, 2)
+	var data uint64 = utilsbytes.ShiftBits(utilsbit.ShiftLeft, 80, 2)
 	var desireResult uint64 = 320
 
 	if !reflect.DeepEqual(data, desireResult) {
@@ -17,7 +17,7 @@ func TestShiftLeft(t *testing.T) {
 }
 
 func TestShiftRight(t *testing.T) {
-	var data uint64 = utilsbit.ShiftBits(utilsbit.ShiftRight, 80, 2)
+	var data uint64 = utilsbytes.ShiftBits(utilsbit.ShiftRight, 80, 2)
 	var desireResult uint64 = 20
 
 	if !reflect.DeepEqual(data, desireResult) {
@@ -28,7 +28,7 @@ func TestShiftRight(t *testing.T) {
 
 func TestUint64ToHex(t *testing.T) {
 	var data uint64 = 11525
-	var hex string = utilsbit.Uint64ToHex(data)
+	var hex string = utilsbytes.Uint64ToHex(data)
 
 	if !reflect.DeepEqual(hex, "2d05") {
 		t.Errorf("uintToHex %s == %s", hex, "2d05")
@@ -38,7 +38,7 @@ func TestUint64ToHex(t *testing.T) {
 
 func TestHexToUint64(t *testing.T) {
 	var data string = "2d05"
-	value, _ := utilsbit.HexToUint64(data)
+	value, _ := utilsbytes.HexToUint64(data)
 	var desire uint64 = 11525
 
 	if !reflect.DeepEqual(value, desire) {

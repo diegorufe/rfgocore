@@ -5,14 +5,20 @@ import (
 	"strings"
 )
 
-// TrimValue constants value to use trim
-const TrimValue string = "\t \n"
-
 // Empty constant
 const Empty string = ""
 
 // Space constant
 const Space string = ""
+
+// BreakLine constant
+const BreakLine string = "\n"
+
+// Tabulation constant
+const Tabulation string = "\t"
+
+// TrimValue constants value to use trim
+const TrimValue string = Tabulation + " " + BreakLine
 
 // IntToString Method for conver int value to string
 func IntToString(value int) string {

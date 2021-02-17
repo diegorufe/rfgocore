@@ -1,4 +1,4 @@
-package utilsbit
+package utilsbytes
 
 import (
 	"fmt"
@@ -14,6 +14,9 @@ const (
 	// ShiftRight indicate right left shift operator
 	ShiftRight ShiftType = false
 )
+
+// BreakLine constant
+const BreakLine byte = '\n'
 
 // ConvertBoolToShiftType is a function to convert bool to ShiftType operator
 func ConvertBoolToShiftType(shiftLeftValue bool) ShiftType {
