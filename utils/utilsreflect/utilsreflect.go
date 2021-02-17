@@ -28,6 +28,8 @@ func SetField(instance interface{}, name string, value interface{}) error {
 	}
 
 	structFieldValue.Set(val)
+
+	// If not have error return nil
 	return nil
 }
 
