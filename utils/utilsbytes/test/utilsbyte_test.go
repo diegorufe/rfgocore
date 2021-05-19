@@ -7,7 +7,7 @@ import (
 )
 
 func TestShiftLeft(t *testing.T) {
-	var data uint64 = utilsbytes.ShiftBits(utilsbit.ShiftLeft, 80, 2)
+	var data uint64 = utilsbytes.ShiftBits(utilsbytes.ShiftLeft, 80, 2)
 	var desireResult uint64 = 320
 
 	if !reflect.DeepEqual(data, desireResult) {
@@ -17,7 +17,7 @@ func TestShiftLeft(t *testing.T) {
 }
 
 func TestShiftRight(t *testing.T) {
-	var data uint64 = utilsbytes.ShiftBits(utilsbit.ShiftRight, 80, 2)
+	var data uint64 = utilsbytes.ShiftBits(utilsbytes.ShiftRight, 80, 2)
 	var desireResult uint64 = 20
 
 	if !reflect.DeepEqual(data, desireResult) {
