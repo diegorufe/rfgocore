@@ -57,3 +57,9 @@ func IsErrorEnabled() bool {
 func Fatal(data interface{}) {
 	log.Fatalln(data)
 }
+
+// ConfigureDefaultFlags : method for configure default flags log to log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile
+func ConfigureDefaultFlags() {
+	// https://golang.org/pkg/log/
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Llongfile)
+}
